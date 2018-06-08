@@ -63,7 +63,7 @@
                50%  {color: blue;}
                100% {color: magenta;}
             }
-            
+
         </style>
     </head>
     <body>
