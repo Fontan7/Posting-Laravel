@@ -4,3 +4,30 @@
 .navbar{
   border-radius: 0px;
 }
+/*-------------------------*/
+/* FOOTER
+/*-------------------------*/
+
+.footer-nav {
+  background-color: #3f3f6a;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;}
+
+  .footer-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .footer-nav li {
+    padding: 10px 10px;
+    list-style-type: none;
+  }
+  .footer-nav li a, .footer-nav li {
+    color: #fff;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 5px;
+  }
