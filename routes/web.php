@@ -22,3 +22,11 @@ Route::get('/profile', function () {  //profile es donde el usuario puede ver su
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/FAQs', function () {
+    return view('FAQs');
+});
+
+Route::get('/Contact', function () {
+    return view('Contact');
+});

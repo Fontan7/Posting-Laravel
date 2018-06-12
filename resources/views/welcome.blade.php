@@ -102,6 +102,8 @@
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
+                        <a href="FAQs">FAQs</a>
+                        <a href="Contact">Contact</a>
                     @endauth
                 </div>
             @endif
