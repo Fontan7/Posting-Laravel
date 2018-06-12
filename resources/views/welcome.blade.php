@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
         <title> Posting </title>
 
         <!-- Fonts -->
@@ -63,6 +63,33 @@
                50%  {color: blue;}
                100% {color: magenta;}
             }
+            /*-------------------------*/
+            /* FOOTER
+            /*-------------------------*/
+
+            .footer-nav {
+              background-color: #3f3f6a;
+              display: flex;
+              flex-wrap: wrap;
+              flex-direction: row;
+              justify-content: space-between;}
+
+              .footer-nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+              }
+
+              .footer-nav li {
+                padding: 10px 10px;
+                list-style-type: none;
+              }
+              .footer-nav li a, .footer-nav li {
+                color: #fff;
+                text-decoration: none;
+                padding-left: 10px;
+                padding-right: 5px;
+              }
 
         </style>
     </head>
@@ -87,5 +114,6 @@
                 </div>
             </div>
         </div>
+        @include('partials/footer')
     </body>
 </html>
