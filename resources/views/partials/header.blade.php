@@ -20,23 +20,24 @@
         <li role="presentation"> <a class="nav" href="{{ route('register') }}">{{ __('Register') }}</a> </li>
       </ul>
     @else
-        <li class="nav nav-pills pull-right">
-            <a class="nav-link" href="#" role="button">
+      <ul class="nav nav-pills pull-right">
+        <li>  <a class="nav" href="#" role="button">
                 {{ Auth::user()->name }} <span class=""></span>
-            </a>
-
-            <div class="dropdown-menu-left" >
-                <a class="dropdown-item" href="{{ route('logout') }}"
+              </a>
+        </li>
+          <li> <a class="nav" href="{{ route('logout') }}"
                    onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
                     {{ __('Logout') }}
                 </a>
+              </li>
+
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
             </div>
-        </li>
+      </ul>
     @endguest
     </div>
   </div><!-- /.container-fluid -->
