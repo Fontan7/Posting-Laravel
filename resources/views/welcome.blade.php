@@ -63,10 +63,22 @@
                50%  {color: blue;}
                100% {color: magenta;}
             }
+            body{
+            	display:flex;
+            	flex-direction:column;
+            	min-height: 100vh; /* USAR EL 100% DEL VIEWPORT EN ALTURA*/
+            }
+            main{
+            	width:100%;
+            	flex: 1 ;  /* RELLENAR EL CONTENIDO CON FLEX:1 */
+            }
             /*-------------------------*/
             /* FOOTER
             /*-------------------------*/
-
+            footer{
+            	width:100%;
+            	height:70px;
+            }
             .footer-nav {
               background-color: #3f3f6a;
               display: flex;
@@ -94,6 +106,7 @@
         </style>
     </head>
     <body>
+      <main>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -116,6 +129,7 @@
                 </div>
             </div>
         </div>
+      </main>
         @include('partials/footer')
     </body>
 </html>
