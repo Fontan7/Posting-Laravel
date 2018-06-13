@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  @section('title')
-     Home
-  @endsection
+@extends('layouts.master')
 
+@section('title')
+     FAQs
+@endsection
 
-</head>
-
-<body>
 @section('content')
-  <div class="container-fluid">
+  <div class="container-fluid letters">
 
-    <!--============ NAV ================-->
-
-
-    <!--============ Body ===============-->
+    <!--============ FAQs ===============-->
     <div class="faq">
       <section>
         <article>
@@ -34,20 +25,18 @@
                 En nuestra plataforma podes:
                 <ul>
                   <li>Crear estados o postear.</li>
-                  <li>Seguir el proceso de los posts.</li>
+                  <li>Seguir el estado de tus posts.</li>
                   <li>Subir imagenes.</li>
-                  <li>Subir videos.</li>
                 </ul>
               </h4></li>
               <br>
-
               <li>
                 <h3 class="question">
                   ¿Cuál es el beneficio de usar Posting?
                 </h3>
                 <h4 class="answer">
                   La ventaja de usar Posting es que podes ahorrar mucho tiempo a la hora de compartir tus posteos en las disitntas redes sociales, y ver en tiempo real el impacto, por ejemplo: likes, retweets, comentarios.
-                  Con Posting podes escribir tus postedes, subir imagenes y videos en muy poco tiempo.
+                  Con Posting podes escribir tus posteos con imagenes.
                 </h4> </li>
                 <br>
 
@@ -56,18 +45,16 @@
                     ¿Cómo usar Posting?
                   </h3>
                   <h4 class="answer">
-                    Lo primero que tenes que hacer es registrar en Posting, una vez que lo hagas y verifiques tu emial podrás agregar las cuentas de cada red social en las que queres que se publique el contenido.
-                    En el menú encontrarás "cuentas" y la imagen de cada red social.
-                    Una vez, agregadas las redes sociales podrás comenzar a postear desde nuestra plataforma y el contenido aparecerá en todas las redes sociales que elegiste.
+                    Lo primero que tenes que hacer es registrarte en Posting, una vez que lo hagas y verifiques tu emial podrás agregar las cuentas de cada red social en las que queres que se publique el contenido.
                   </h4></li>
                 </br>
 
                 <li>
                   <h3 class="question">
-                    ¿Cómo agregar cuentas sociales a mi panel de control?
+                    ¿Cómo agregar cuentas sociales a mis posteos?
                   </h3>
                   <h4 class="answer">
-                    Ir a: Cuentas > agregar cuenta > seleccionas la cuenta que queres > das los permisos y listo.
+                    En el Home > Cuentas > seleccionas la cuenta que queres > das los permisos y listo.
                   </h4></li>
                 </br>
 
@@ -76,7 +63,7 @@
                     ¿Cómo elijo en que cuenta publicar cada posteo?
                   </h3>
                   <h4 class="answer">
-                    Ir a: Publicar estado > Escribis el estado > Enviar > Seleccionas las cuentas en las que queres el posteo.
+                    Ir a: Publicar estado > Escribis el estado > Seleccionas las cuentas en las que queres el posteo > Enviar.
                   </h4></li>
                 </br>
 
@@ -85,7 +72,7 @@
                     ¿Cómo eliminar cuentas sociales?
                   </h3>
                   <h4 class="answer">
-                    Ir a: Cuentas > eliminar cuenta > Seleccionar cuentas a eliminar > Aceptar.
+                    En el Home > Cuentas > Seleccionar cuenta a eliminar > Aceptar.
                   </h4></li>
                 </br>
 
@@ -110,7 +97,5 @@
             </article>
           </section>
         </div>
-      </body>
-        @endsection
-        @include('partials/footer')
-      </html>
+      </div>
+@endsection

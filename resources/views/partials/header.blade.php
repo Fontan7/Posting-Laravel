@@ -1,5 +1,5 @@
 <header>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-clasic">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -21,7 +21,7 @@
       </ul>
     @else
       <ul class="nav nav-pills pull-right">
-        <li>  <a class="nav" href="#" role="button">
+        <li>  <a class="nav" href="profile" role="button">
                 {{ Auth::user()->name }} <span class=""></span>
               </a>
         </li>
