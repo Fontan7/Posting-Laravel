@@ -12,18 +12,11 @@
 
 <body>
   <main>
-
     @include('partials/header')
-
     <div class="container-fluid letters">
       @yield('content')
-
-
-
-
-
-  </div>
-</main>
+    </div>
+  </main>
   @include('partials/footer')
 </body>
 </html>

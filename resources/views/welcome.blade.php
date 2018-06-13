@@ -93,7 +93,7 @@
               }
 
               .footer-nav li {
-                padding: 10px 10px;
+                padding: 5px 5px;
                 list-style-type: none;
               }
               .footer-nav li a, .footer-nav li {
@@ -106,7 +106,6 @@
         </style>
     </head>
     <body>
-      <main>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -120,16 +119,12 @@
                     @endauth
                 </div>
             @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Posting
-                </div>
-
-                </div>
+          <div class="content">
+            <div class="title m-b-md">
+                Posting
             </div>
+          </div>
         </div>
-      </main>
         @include('partials/footer')
     </body>
 </html>
