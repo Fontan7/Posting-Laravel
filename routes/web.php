@@ -30,3 +30,7 @@ Route::get('/FAQs', function () {
 Route::get('/Contact', function () {
     return view('Contact');
 });
+
+// genero un route para que un administrador pueda dar de alta redes
+// a las cuales puede enviar Posting
+Route::resource('admin/networks', 'admin\networkController');
