@@ -17,10 +17,12 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+                  <div class="facebook">
+                    <h1>prev facebook</h1>
                     {{ $data['text_post'] }}
-                    {{$data['file']}}
                     <img src="C:\Users\graciela\Pictures\2432783.jpg" height="100" width="100">
+                  </div>
+                  <h1>prev isntagram</h1>
                 </div>
             </div>
         </div>
