@@ -30,8 +30,9 @@ class postcontroller extends Controller
     public function preview(Request $request)
     {
       $data = request()->all();
-      $data['file'] = request()->img_post->getPath().'/'.
-      request()->img_post->getClientOriginalName();
+      dd($data);
+//      $data['file'] = request()->img_post->getPath().'/'.
+  //    request()->img_post->getClientOriginalName();
       return view('createPostPreview', compact('data'));
 
 
