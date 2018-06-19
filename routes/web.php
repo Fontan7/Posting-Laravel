@@ -34,3 +34,5 @@ Route::get('/Contact', function () {
 // genero un route para que un administrador pueda dar de alta redes
 // a las cuales puede enviar Posting
 Route::resource('admin/networks', 'admin\networkController');
+
+Route::post('post/preview', 'front\postcontroller@preview');

@@ -13,7 +13,7 @@
 <body>
   <main>
     @include('partials/header')
-    <div class="container-fluid letters">
+    <div class="py-4">
       @yield('content')
     </div>
   </main>
