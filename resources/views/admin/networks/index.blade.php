@@ -48,7 +48,9 @@
       <div class="thumbnail">
         <div class="caption">
           <h3>Posting</h3>
-          <p>{{ $posts->text_post }}</p>
+          @foreach ($posts as $post)
+            <p>{{ $post->text_post }}</p>
+          @endforeach
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\front;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class postcontroller extends Controller
+class Postcontroller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -30,7 +30,7 @@ class postcontroller extends Controller
     public function preview(Request $request)
     {
       $data = request()->all();
-  
+
 //      $data['file'] = request()->img_post->getPath().'/'.
   //    request()->img_post->getClientOriginalName();
       return view('createPostPreview', compact('data'));
