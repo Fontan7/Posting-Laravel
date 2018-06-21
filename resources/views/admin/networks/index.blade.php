@@ -7,8 +7,11 @@
   <table class="table table-striped table-bordered">
               <thead class="thead-dark">
                   <tr>
-                      <th scope="col">Descripcion</th>
+                      <th scope="col">Red social</th>
                       <th scope="col">Acciones</th>
+                      <th scope="col">Imagenes</th>
+                      <th scope="col">Caracteres máximos por posteo</th>
+                      <th scope="col">Forma de previsualizar</th>
                   </tr>
               </thead>
               <tbody>
