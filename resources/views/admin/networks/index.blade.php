@@ -4,6 +4,8 @@
   <a href="/admin/networks/create" class="btn btn-success">Agregar nueva red</a>
 <br>
 <br>
+
+<div class="">
   <table class="table table-striped table-bordered">
               <thead class="thead-dark">
                   <tr>
@@ -32,5 +34,43 @@
                       </tr>
                   @endforeach
               </tbody>
-          </table>
+            </table>
+</div>
+
+
+<div class="">
+  <br><h4>Previsualizar posteos realizados</h4><br>
+
+  <p>Aca van las previsualizaciones</p>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="caption">
+          <h3>Posting</h3>
+          <p> Aca puse $posts->text_post y tira error</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="caption">
+          <h3>Posting</h3>
+          <p> Aca puse $posts->text_post y tira error</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="caption">
+          <h3>Posting</h3>
+          <p> Aca puse $posts->text_post y tira error</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+</div>
 @endsection
