@@ -48,7 +48,7 @@
       <div class="thumbnail">
         <div class="caption">
           <h3>Posting</h3>
-          <p> Aca puse $posts->text_post y tira error</p>
+          <p>{{ $posts->text_post }}</p>
         </div>
       </div>
     </div>

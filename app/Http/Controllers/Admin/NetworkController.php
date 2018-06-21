@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Network;
+use App\Posts;
+
 
 class NetworkController extends Controller
 {
@@ -17,6 +19,13 @@ class NetworkController extends Controller
     {
         $networks = Network::all();
         return view('admin.networks.index', compact('networks'));
+
+    }
+
+    public function posts_controller()
+    {
+        $posts = Posts::all();
+        return view('admin.posts.index', compact('posts'));
 
     }
 
