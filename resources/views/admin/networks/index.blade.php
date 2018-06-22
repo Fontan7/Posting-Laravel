@@ -24,12 +24,15 @@
                           <td scope="col">{{ $network->characters }}</td>
                           <td scope="col">{{ $network->view }}</td>
                             <td scope="col">
-                              <a href="/admin/networks/{{$network->id}}/edit" class="btn btn-primary">Editar</a>
+                              <a href="/admin/networks/{{$network->id}}/edit" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                              </a>
                               <form method="post" action="/admin/networks/{{$network->id}}">
                                   @csrf
                                   {{ method_field('DELETE') }}
-                                      <input name="borrar" type="submit" value="Borrar" href="" class="btn btn-danger">
-                              </form>
+                                    <input name="borrar" type="submit" value="" href="" class="fa fa-trash" class="btn-danger">
+
+                                    </form>
                           </td>
                       </tr>
                   @endforeach
