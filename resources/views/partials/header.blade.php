@@ -22,8 +22,8 @@
     @else
     <ul class="nav navbar-nav navbar-right">
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
-        <ul class="dropdown-menu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">{{ Auth::user()->name }} <span class="caret"></span></a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
           <li><a href="#">Mi Perfil</a></li>
           <li><a href="#">Ver Posts</a></li>
           <li role="separator" class="divider"></li>
