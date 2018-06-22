@@ -20,24 +20,17 @@
         <li role="presentation"> <a class="nav" href="{{ route('register') }}">{{ __('Register') }}</a> </li>
       </ul>
     @else
-      <ul class="nav nav-pills pull-right">
-        <li>  <a class="nav" href="profile" role="button">
-                {{ Auth::user()->name }} <span class=""></span>
-              </a>
-        </li>
-          <li> <a class="nav" href="{{ route('logout') }}"
-                   onclick="event.preventDefault();
-                                 document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
-                </a>
-              </li>
-
-
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
-            </div>
-      </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Mi Perfil</a></li>
+          <li><a href="#">Ver Posts</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Cerrar sesión</a></li>
+        </ul>
+      </li>
+    </ul>
     @endguest
     </div>
   </div><!-- /.container-fluid -->
