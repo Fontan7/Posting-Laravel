@@ -20,6 +20,9 @@ main{
 .navbar{
   border-radius: 0px;
 }
+.line {
+	display: inline-block;
+}
 /*-------------------------*/
 /* FOOTER
 /*-------------------------*/

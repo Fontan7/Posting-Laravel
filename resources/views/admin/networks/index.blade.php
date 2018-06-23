@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('title', 'Listado de redes')
 @section('content')
-  <a href="/admin/networks/create" class="btn btn-success">Agregar nueva red</a>
+  <a href="/admin/networks/create" class="btn btn-primary">Agregar nueva red</a>
 <br>
 <br>
 
@@ -24,15 +24,18 @@
                           <td scope="col">{{ $network->characters }}</td>
                           <td scope="col">{{ $network->view }}</td>
                             <td scope="col">
+                            <div class="line" >
                               <a href="/admin/networks/{{$network->id}}/edit" class="btn btn-primary">
                                 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                               </a>
-                              <form method="post" action="/admin/networks/{{$network->id}}">
-                                  @csrf
-                                  {{ method_field('DELETE') }}
-                                    <input name="borrar" type="submit" value="" href="" class="fa fa-trash" class="btn-danger">
-
-                                    </form>
+                              <form method="post"     action="/admin/networks/{{$network->id}}">
+                                @csrf
+                                {{ method_field('DELETE') }}
+                                <button type="submit" name="borrar" class="btn-danger">
+                                  <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+                                 </button>
+                                </form>
+                              </div>
                           </td>
                       </tr>
                   @endforeach

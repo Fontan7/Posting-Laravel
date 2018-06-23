@@ -38,4 +38,8 @@ Route::resource('admin/networks', 'admin\networkController');
 // genero un route para que un administrador pueda dar de alta roles de usuarios
 Route::resource('admin/rolls', 'admin\RollController');
 
+
+// genero un route para que un administrador pueda dar de modificar usuarios
+Route::resource('admin/users', 'admin\UserController');
+
 Route::post('post/preview', 'front\postcontroller@preview');

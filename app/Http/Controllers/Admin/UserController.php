@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Roll;
-
-class RollController extends Controller
+use App\User;
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,8 @@ class RollController extends Controller
      */
     public function index()
     {
-      $rolls = Roll::all();
-      return view('admin.rolls.index', compact('rolls'));
+      $users = User::all();
+      return view('admin.users.index', compact('users'));
     }
 
     /**
@@ -26,7 +25,7 @@ class RollController extends Controller
      */
     public function create()
     {
-      return view('admin.rolls.create');
+        //
     }
 
     /**
@@ -37,8 +36,7 @@ class RollController extends Controller
      */
     public function store(Request $request)
     {
-     $roll = Roll::create(request()->all());
-     return redirect('admin/rolls');
+        //
     }
 
     /**
@@ -83,8 +81,6 @@ class RollController extends Controller
      */
     public function destroy($id)
     {
-      $roll = Roll::find($id);
-      $roll->delete();
-      return redirect('admin/rolls');
+        //
     }
 }
