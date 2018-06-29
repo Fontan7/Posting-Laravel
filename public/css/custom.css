@@ -8,24 +8,6 @@ main{
 	flex: 1 ;  /* RELLENAR EL CONTENIDO CON FLEX:1 */
 }
 
-
-	body{
-.letters {
-    background-color: #fff;
-    color: #636b6f;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-}
-.nav-pills{
-      line-height: 35px;
-}
-.navbar{
-  border-radius: 0px;
-}
-.line {
-	display: inline-block;
-}
-
 /*-------------------------*/
 /* FOOTER
 /*-------------------------*/
@@ -56,3 +38,13 @@ footer {
     padding-left: 10px;
     padding-right: 5px;
   }
+
+.nav-pills{
+      line-height: 35px;
+}
+.navbar{
+  border-radius: 0px;
+}
+.line {
+	display: inline-block;
+}
