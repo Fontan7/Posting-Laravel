@@ -42,7 +42,7 @@
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
           <div class="caption">
-            <h3>Posting #1</h3>
+            <h3>Posting</h3>
             @foreach ($posts as $post)
               <p>{{ $post->text_post }}</p>
             @endforeach
