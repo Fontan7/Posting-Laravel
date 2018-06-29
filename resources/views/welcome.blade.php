@@ -58,11 +58,12 @@
                 animation-iteration-count: infinite;
             }
             @keyframes color {
-               0%   {color: rgb(251, 13, 13);}
-               25%  {color: rgb(76, 250, 47);}
-               50%  {color: blue;}
-               100% {color: magenta;}
-            }
+          		 0%   {color: rgb(251, 13, 13);}
+          		 25%  {color: rgb(76, 250, 47);}
+          		 50%  {color: blue;}
+          		 100% {color: magenta;}
+          	}
+
             body{
             	display:flex;
             	flex-direction:column;
