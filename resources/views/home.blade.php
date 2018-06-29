@@ -13,12 +13,12 @@
             <form class="" action="post/preview" method="post" enctype="multipart/form-data">
               @csrf
               <div class="card-body bg-light">
-                <textarea class="form-control border-0" name="body" placeholder="¿Que estás pensando?"></textarea>
+                <textarea class="form-control border-0" name="text_post" placeholder="¿Que estás pensando?"></textarea>
               </div>
 
               <div class="card-footer bg-light">
                 <div>
-                  <label for="img_post" > Ingresar una Imagen</label>
+                  <label for="img_post">Ingresar una Imagen</label>
                   <input class="hidden" name="img_post" id='img_post' type="file">
                 </div>
                 <div>
