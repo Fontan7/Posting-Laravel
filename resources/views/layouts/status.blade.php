@@ -27,19 +27,7 @@
             </li>
           </ul>--}}
 
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{ Auth::user()->name }}
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Mi Perfil</a>
-                <a class="dropdown-item" href="#">Ver posts</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Cerrar sesión</a>
-              </div>
-            </li>
-          </ul>
+
         </div>
       </div>
     </nav>

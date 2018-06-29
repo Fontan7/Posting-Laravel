@@ -1,34 +1,44 @@
 <header>
-<nav class="navbar navbar-clasic">
+  <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+    <div class="navbar navbar-clasic">
+      <a class="navbar-brand" href="#">Posting</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" class="m-b-md" href="home">Posting</a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          {{--<li class="nav-item active">
+            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>--}}
     </div>
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> <!-- /.navbar-collapse -->
     @guest
-      <ul class="nav nav-pills pull-right">
+      <ul class="navbar-nav ml-auto">
         <li role="presentation"> <a class="nav" href="{{ route('login') }}">{{ __('Login') }}</a> </li>
         <li role="presentation"> <a class="nav" href="{{ route('register') }}">{{ __('Register') }}</a> </li>
       </ul>
     @else
-    <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">{{ Auth::user()->name }} <span class="caret"></span></a>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li><a href="#">Mi Perfil</a></li>
-          <li><a href="#">Ver Posts</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Cerrar sesión</a></li>
-        </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown">
+        <a class="float-rihgt nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ Auth::user()->name }}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Mi Perfil</a>
+          <a class="dropdown-item" href="#">Ver posts</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Cerrar sesión</a>
+        </div>
       </li>
     </ul>
     @endguest
