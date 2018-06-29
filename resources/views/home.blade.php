@@ -41,9 +41,45 @@
                       </div>
                     </div>
                 </div>
-              
+
               </div>
         </div>
     </div>
+
+    <div class="">
+      <br><h4>Previsualizar posteos realizados</h4><br>
+
+      <p>Aca van las previsualizaciones</p>
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <div class="caption">
+              <h3>Posting</h3>
+              @foreach ($posts as $post)
+                <p>{{ $post->text_post }}</p>
+              @endforeach
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <div class="caption">
+              <h3>Posting</h3>
+              <p> Aca puse $posts->text_post y tira error</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <div class="caption">
+              <h3>Posting</h3>
+              <p> Aca puse $posts->text_post y tira error</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
 </div>
 @endsection

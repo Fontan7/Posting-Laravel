@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Network;
+use App\Post;
 
 class HomeController extends Controller
 {
@@ -26,6 +27,7 @@ class HomeController extends Controller
     public function index()
     {
         $networks = Network::all();
-        return view('home', compact('networks'));
+        $posts = Post::all();
+        return view('home', compact('networks','posts'));
     }
 }
