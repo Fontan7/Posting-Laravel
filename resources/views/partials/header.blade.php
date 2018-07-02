@@ -25,7 +25,16 @@
           <a class="dropdown-item" href="#">Mi Perfil</a>
           <a class="dropdown-item" href="#">Ver posts</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Cerrar sesión</a>
+          <a class="dropdown-item" href="{{ url('/logout') }}"
+            onclick="event.preventDefault();
+             document.getElementById('logout-form').submit();">
+              Cerrar sesión
+          </a>
+          <form id="logout-form" action="{{ url('/logout')
+          }}"
+          method="POST" style="display: none;">
+            {{ csrf_field() }}
+          </form>
         </div>
       </li>
     </ul>

@@ -5,18 +5,24 @@
 @endsection
 
 @section('content')
+
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+      <form class="col-md-8" action="post/store" method="post">
+        <input class="btn btn-primary" type="submit" name="post" value="Postear">
+      </form>
+      <br>
+      <br>
+    <div class="col-md-8">
             <div class="card">
                 <div class="card-header"></div>
-
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
                         </div>
                     @endif
+
                   <div class="facebook">
                     <h1>prev facebook</h1>
                     {{ $data['text_post'] }}
