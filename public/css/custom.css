@@ -1,7 +1,7 @@
 body{
 	display:flex;
 	flex-direction:column;
-	min-height: 100vh; /* USAR EL 100% DEL VIEWPORT EN ALTURA*/
+	min-height: 107vh; /* USAR EL 100% DEL VIEWPORT EN ALTURA*/
 }
 main{
 	width:100%;
