@@ -11,17 +11,25 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> <!-- /.navbar-collapse -->
     @guest
-      <ul class="navbar-nav ml-auto">
-        <li role="presentation"> <a class="nav" href="{{ route('login') }}">{{ __('Login') }}</a> </li>
-        <li role="presentation"> <a class="nav" href="{{ route('register') }}">{{ __('Register') }}</a> </li>
+      <div class="links">
+      <ul>
+        <li>
+          <a role="presentation" href="{{   route('login') }}">{{ __('Login') }}
+          </a>
+        </li>
+        <li>
+          <a role="presentation"  href="{{ route('register') }}">{{ __('Register') }}</a>
+      </li>
       </ul>
+    </div>
+
     @else
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
         <a class="float-rihgt nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           {{ Auth::user()->name }}
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Mi Perfil</a>
           <a class="dropdown-item" href="#">Ver posts</a>
           <div class="dropdown-divider"></div>

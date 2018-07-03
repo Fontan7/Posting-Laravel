@@ -2,12 +2,36 @@ body{
 	display:flex;
 	flex-direction:column;
 	min-height: 107vh; /* USAR EL 100% DEL VIEWPORT EN ALTURA*/
+
 }
 main{
 	width:100%;
 	flex: 1 ;  /* RELLENAR EL CONTENIDO CON FLEX:1 */
 }
+.links  a {
+		color: #636b6f;
+		padding: 0 25px;
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: .1rem;
+		text-decoration: none;
+		text-transform: uppercase;
+}
+.links li {
+	padding: 10px 10px;
+	list-style-type: none;
 
+}
+.links ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	}
+.links {
+	width: 100%;
+	display: flex;
+	align-self: flex-end;
+}
 /*-------------------------*/
 /* FOOTER
 /*-------------------------*/
