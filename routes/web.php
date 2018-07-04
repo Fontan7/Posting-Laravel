@@ -9,6 +9,10 @@ Route::get('/welcome', function () {  //hace lo mismo que la ruta anterior, solo
     return view('welcome');
 });
 
+Route::get('/posteos', function(){
+  return view ('posteos');
+});
+
 
 
 Route::get('/ubercommand', function () {  //ubercommand (super comando) es donde el usuario escribe los post y decide a que redes enviarlo
