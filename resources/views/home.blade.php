@@ -40,7 +40,7 @@
 
     <div class="col-8 mx-auto">
       <div id="red">
-        
+
       </div>
     </div>
   </div>

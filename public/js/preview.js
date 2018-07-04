@@ -2,7 +2,7 @@ function netClick(i){
 
   if (i.checked && i.value == 1) {
     document.getElementById('red').style.display='block';
-    $('#red').append('<div id="facebook"><div class="card-body d-flex flex-column card border-1 shadow-sm"><div class="d-flex align-items-center" ><img class="rounded-circle mr-3" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg"><div class=""><h5 class="mb-1 shadow-sm">Dario - Facebook</h5><div class="small text-muted">Hace una hora</div></div></div><p class="card-text text-secondary">hola</p></div><div class="card card-footer border-1 p-1 d-flex mb-3"><i class="far fa-thumbs-up text-secondary p-2 d-flex justify-content-between align-items-center"></i></div></div>');
+    $('#red').append('<div id="facebook"><div class="card-body d-flex flex-column card border-1 shadow-sm"><div class="d-flex align-items-center" ><img class="rounded-circle mr-3" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg"><div class=""><h5 class="mb-1 shadow-sm">Dario - Facebook</h5><div class="small text-muted">Hace una hora</div></div></div><p class="card-text text-secondary"></p></div><div class="card card-footer border-1 p-1 d-flex mb-3"><i class="far fa-thumbs-up text-secondary p-2 d-flex justify-content-between align-items-center"></i></div></div>');
   } if (!i.checked && i.value == 1) {
     $('#facebook').remove();
     //document.getElementById('red').style.display='none'
@@ -10,14 +10,14 @@ function netClick(i){
 
   if (i.checked && i.value == 2) {
     document.getElementById('red').style.display='block';
-    $('#red').append('<div id="twitter"><div class="card-body d-flex flex-column card border-1 shadow-sm" ><div class="d-flex align-items-center" ><img class="rounded-circle mr-3" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg"><div class=""><h5 class="mb-1 shadow-sm">Dario - Twitter</h5><div class="small text-muted">Hace una hora</div></div></div><p class="card-text text-secondary">hola</p></div><div class="card card-footer border-1 p-1 d-flex mb-3"><i class="far fa-thumbs-up text-secondary p-2 d-flex justify-content-between align-items-center"></i></div></div>');
+    $('#red').append('<div id="twitter"><div class="card-body d-flex flex-column card border-1 shadow-sm" ><div class="d-flex align-items-center" ><img class="rounded-circle mr-3" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg"><div class=""><h5 class="mb-1 shadow-sm">Dario - Twitter</h5><div class="small text-muted">Hace una hora</div></div></div><p class="card-text text-secondary"></p></div><div class="card card-footer border-1 p-1 d-flex mb-3"><i class="far fa-thumbs-up text-secondary p-2 d-flex justify-content-between align-items-center"></i></div></div>');
   } if (!i.checked && i.value == 2) {
     $('#twitter').remove();
   }
 
   if (i.checked && i.value == 3) {
     document.getElementById('red').style.display='block';
-    $('#red').append('<div id="instagram"><div class="card-body d-flex flex-column card border-1 shadow-sm" id="instagram"><div class="d-flex align-items-center" ><img class="rounded-circle mr-3" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg"><div class=""><h5 class="mb-1 shadow-sm">Dario - Instagram</h5><div class="small text-muted">Hace una hora</div></div></div><p class="card-text text-secondary">hola</p></div><div class="card card-footer border-1 p-1 d-flex mb-3"><i class="far fa-thumbs-up text-secondary p-2 d-flex justify-content-between align-items-center"></i></div></div>');
+    $('#red').append('<div id="instagram"><div class="card-body d-flex flex-column card border-1 shadow-sm" id="instagram"><div class="d-flex align-items-center" ><img class="rounded-circle mr-3" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg"><div class=""><h5 class="mb-1 shadow-sm">Dario - Instagram</h5><div class="small text-muted">Hace una hora</div></div></div><p id="preview" class="card-text text-secondary"></p></div><div class="card card-footer border-1 p-1 d-flex mb-3"><i class="far fa-thumbs-up text-secondary p-2 d-flex justify-content-between align-items-center"></i></div></div>');
   } if (!i.checked && i.value == 3) {
     $('#instagram').remove();
   }
@@ -25,21 +25,9 @@ function netClick(i){
   console.log(i.checked);
 }
 
+// Prueba de texto.
 
-/*if (i.checked) {
-  document.getElementById('red').style.display='block';
-  $('#red').html('<div class="card-body d-flex flex-column card border-1 shadow-sm" id="back-post"><div class="d-flex align-items-center" ><img class="rounded-circle mr-3" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg"><div class=""><h5 class="mb-1 shadow-sm">Dario</h5><div class="small text-muted">Hace una hora</div></div></div><p class="card-text text-secondary">hola</p></div><div class="card card-footer border-1 p-1 d-flex mb-3"><i class="far fa-thumbs-up text-secondary p-2 d-flex justify-content-between align-items-center"></i></div>');
-} else {
-  document.getElementById('red').style.display='none';
-}*/
-
-
-
-/*  if (i.value == 1) {
-    document.getElementById('back-post').style.background = 'white';
-  } else if (i.value == 2) {
-    document.getElementById('back-post').style.background = 'grey';
-  } else {
-    document.getElementById('back-post').style.background = 'green';
-  }
-*/
+$(document).ready(function() {
+  $("#text-post").keyup(function() {
+      $("#preview").html($(this).val())
+});
