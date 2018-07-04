@@ -2,28 +2,25 @@
   <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar navbar-clasic">
-      <a class="navbar-brand" href="#">Posting</a>
+    <div class="navbar navbar-clasic lineHeader row">
+      <a class="navbar-brand col-md-4" href="{{ route('home') }}">Posting</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> <!-- /.navbar-collapse -->
     @guest
-      <div class="links">
-      <ul>
-        <li>
-          <a role="presentation" href="{{   route('login') }}">{{ __('Login') }}
+      <div class="lineHeader col-md-4 col-md-offset-4 links"> <!-- /.navbar-collapse -->
+
+          <a role="presentation"  href="{{   route('login') }}">{{ __('Login') }}
           </a>
-        </li>
-        <li>
-          <a role="presentation"  href="{{ route('register') }}">{{ __('Register') }}</a>
-      </li>
-      </ul>
+
+          <a role="presentation" href="{{ route('register') }}">{{ __('Register') }}</a>
+
     </div>
 
     @else
+      <div class="collapse navbar-collapse col-md-4 col-md-offset-4" id="bs-example-navbar-collapse-1"> <!-- /.navbar-collapse -->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
         <a class="float-rihgt nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

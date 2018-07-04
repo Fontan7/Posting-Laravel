@@ -15,7 +15,6 @@
               <div class="card-body bg-light">
                 <textarea class="form-control border-0" name="text_post" placeholder="¿Que estás pensando?"></textarea>
               </div>
-
               <div class="card-footer bg-light">
                 <div>
                   <label for="img_post">Ingresar una Imagen</label>

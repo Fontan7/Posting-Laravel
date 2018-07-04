@@ -4,6 +4,7 @@ namespace App\Http\Controllers\front;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Network;
 
 class Postcontroller extends Controller
 {
@@ -30,14 +31,8 @@ class Postcontroller extends Controller
     public function preview(Request $request)
     {
       $data = request()->all();
-
-//      $data['file'] = request()->img_post->getPath().'/'.
-  //    request()->img_post->getClientOriginalName();
-      return view('createPostPreview', compact('data'));
-
-
-//      dd(request()->file()->getClientOriginalName());
-
+      $networks = Network::all();
+      return view('createPostPreview', compact('data', 'networks'));
     }
 
     /**
@@ -48,7 +43,7 @@ class Postcontroller extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**

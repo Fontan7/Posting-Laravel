@@ -8,9 +8,9 @@
 
 <div class="container-fluid">
     <div class="row justify-content-center">
-      <form class="col-md-8" action="post/store" method="post">
+      <form class="col-md-8" action="store" method="post">
+        @csrf
         <input class="btn btn-primary" type="submit" name="post" value="Postear">
-      </form>
       <br>
       <br>
     <div class="col-md-8">
@@ -22,16 +22,23 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                  <div class="facebook">
-                    <h1>prev facebook</h1>
-                    {{ $data['text_post'] }}
-                    <img src="C:\Users\graciela\Pictures\2432783.jpg" height="100" width="100">
-                  </div>
-                  <h1>prev isntagram</h1>
+                  @foreach ($networks as $network)
+                    @php
+                      $dnet = 'net' . $network->id;
+                    @endphp
+                    @if (isset($data[$dnet]))
+                      <div class="{{$network->description}}">
+                        <h1>{{$network->description}}</h1>
+                        <input type="text" name="net{{$network->id}}" value="{{$network->id}}" hidden>
+                        <input type="text" name="text_post" value="{{$data['text_post']}}">
+                      </div>
+                      <br>
+                    @endif
+                  @endforeach
                 </div>
             </div>
         </div>
+      </form>
     </div>
 </div>
 @endsection

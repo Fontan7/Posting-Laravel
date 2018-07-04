@@ -20,17 +20,26 @@ main{
 .links li {
 	padding: 10px 10px;
 	list-style-type: none;
+	width: 45%;
 
 }
-.links ul {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+.ulnav {
+	display: inline;
 	}
 .links {
 	width: 100%;
-	display: flex;
-	align-self: flex-end;
+}
+.lineHeader {
+	width: 90%;
+}
+.Facebook {
+	background-color: blue;
+}
+.Twitter {
+	background-color: grey;
+}
+.Instagram {
+	background-color: orange;
 }
 /*-------------------------*/
 /* FOOTER
