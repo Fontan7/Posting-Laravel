@@ -8,12 +8,7 @@ Route::get('/', function () {  //pagina de bienvenida para usuarios nuevos o des
 Route::get('/welcome', function () {  //hace lo mismo que la ruta anterior, solo que tambien funciona si el usuario tipea welcome en la url
     return view('welcome');
 });
-
-Route::get('/posteos', function(){
-  return view ('posteos');
-});
-
-
+Route::get('/posteos', 'front\postcontroller@index');
 
 Route::get('/ubercommand', function () {  //ubercommand (super comando) es donde el usuario escribe los post y decide a que redes enviarlo
     return view('ubercommand');
@@ -47,5 +42,5 @@ Route::resource('admin/rolls', 'admin\RollController');
 // genero un route para que un administrador pueda dar de modificar usuarios
 Route::resource('admin/users', 'admin\UserController');
 
-Route::post('post/preview', 'front\postcontroller@preview');
+
 Route::post('post/store', 'front\postcontroller@store');

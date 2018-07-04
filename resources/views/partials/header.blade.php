@@ -28,7 +28,7 @@
         </a>
         <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Mi Perfil</a>
-          <a class="dropdown-item" href="#">Ver posts</a>
+          <a class="dropdown-item" href="/posteos">Ver posts</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="{{ url('/logout') }}"
             onclick="event.preventDefault();

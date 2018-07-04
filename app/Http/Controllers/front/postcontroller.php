@@ -5,9 +5,13 @@ namespace App\Http\Controllers\front;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Network;
+use App\Post;
+
+
 
 class Postcontroller extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +19,8 @@ class Postcontroller extends Controller
      */
     public function index()
     {
-
+        $posts = Post::all();
+        return view ('posteos', compact('posts'));
     }
 
     /**
@@ -30,9 +35,7 @@ class Postcontroller extends Controller
 
     public function preview(Request $request)
     {
-      $data = request()->all();
-      $networks = Network::all();
-      return view('createPostPreview', compact('data', 'networks'));
+
     }
 
     /**
@@ -43,7 +46,18 @@ class Postcontroller extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+      $request['user_id'] = \Auth::user()->id;
+      $networks = Network::all();
+      $nets;
+
+      foreach ($networks as $key => $network) {
+        $net = 'net'.$network['id'];
+        if (!isset($request[$net])) {
+           $nets[] = $network['id'];
+        }
+      }
+      $post = Post::create(request()->all());
+      $post->networks()->sync($nets);
     }
 
     /**

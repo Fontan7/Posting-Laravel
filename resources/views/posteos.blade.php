@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-   Home
+   Posteos
 @endsection
 
 @section('content')
@@ -32,3 +32,4 @@
     </div>
   </div>
 </div>
+@endsection
