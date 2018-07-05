@@ -51,8 +51,7 @@ class Postcontroller extends Controller
       $nets;
 
       foreach ($networks as $key => $network) {
-        $net = 'net'.$network['id'];
-        if (!isset($request[$net])) {
+        if (!isset($request[$network['description']])) {
            $nets[] = $network['id'];
         }
       }

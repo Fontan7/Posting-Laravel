@@ -7,6 +7,8 @@
 @section('content')
 
 
+
+
 <div class="container">
   <div class="row">
       <div class="col-8 mx-auto">
@@ -24,7 +26,7 @@
                 <div>
                   <label>Seleccione redes a previsualizar:  </label>
                   @foreach ($networks as $network)
-                    <input onclick="netClick(this)" type="checkbox" name="net{{$network->id}}" value="{{$network->id}}">{{$network->description}}</input>
+                    <input  onclick="netClick(this)" type="checkbox" name="{{$network->description}}" value="{{$network->id}}">{{$network->description}}</input>
                   @endforeach
                 </div>
                 <button class="btn btn-primary" id="create-status">Postear</button>
@@ -48,6 +50,5 @@
 </div>
 </div>
 
-<script  type="text/javascript"  src="js/preview.js"></script>
 
 @endsection

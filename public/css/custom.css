@@ -32,14 +32,48 @@ main{
 .lineHeader {
 	width: 90%;
 }
-.Facebook {
-	background-color: blue;
+.Facebook p {
+	font-family: inherit;
+	font-size: 14px;
+  font-weight: normal;
+  line-height: 1.38;
+	color: blue;
+}
+.Facebook h5{
+	background-color: #4267b2;
+	border-bottom: 1px solid #29487d;
+	color: #fff;
+	min-width: 100%;
+	color: white;
 }
 .Twitter {
-	background-color: grey;
+
 }
-.Instagram {
-	background-color: orange;
+.Instagram h5{
+		font: inherit;
+    font-style: inherit;
+    font-variant-ligatures: inherit;
+    font-variant-caps: inherit;
+    font-variant-numeric: inherit;
+    font-variant-east-asian: inherit;
+    font-weight: inherit;
+    font-stretch: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+		vertical-align: baseline;
+}
+.Instagram p {
+	font-family: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.38;
+	color: #262626;
+}
+.Instagram img {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #f32c69;
 }
 /*-------------------------*/
 /* FOOTER
