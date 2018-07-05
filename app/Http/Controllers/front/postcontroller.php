@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Network;
 use App\Post;
+use Intervention\Image;
 
 
 
@@ -21,6 +22,21 @@ class Postcontroller extends Controller
     {
         $posts = Post::all();
         return view ('posteos', compact('posts'));
+    }
+
+    public function uploadImage()
+    {
+      $file = Request::file('image');
+      /*$random = str_random(10);
+      $nombre = $random.'-'.$file->getClientOriginalName();
+      $path = public_path('uploads/'.$nombre);
+      $url = '/uploads/'.$nombre;
+      $image = Image::make($file->getRealPath());
+      $image->save($path);*/
+
+      $image = Image::make($file->getRealPath());
+      $image->encode('data-url');
+      return '<img src="'.$image.'"/>';
     }
 
     /**

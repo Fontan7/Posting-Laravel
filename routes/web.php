@@ -43,4 +43,5 @@ Route::resource('admin/rolls', 'admin\RollController');
 Route::resource('admin/users', 'admin\UserController');
 
 
-Route::post('post/store', 'front\postcontroller@store');
+//Route::post('post/store', 'front\postcontroller@store');
+Route::post('post/store', 'front\postcontroller@uploadImage');

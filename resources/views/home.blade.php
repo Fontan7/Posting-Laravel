@@ -17,7 +17,7 @@
               <div class="card-footer bg-light">
                 <div>
                   <label for="img_post">Ingresar una Imagen</label>
-                  <input class="hidden" name="img_post" id='img_post' type="file">
+                  <input class="hidden" name="img_post" id='img_post' type="file" accept="image/*">
                 </div>
                 <div>
                   <label>Seleccione redes a previsualizar:  </label>
