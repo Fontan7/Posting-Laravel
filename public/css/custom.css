@@ -39,13 +39,17 @@ main{
   line-height: 1.38;
 	color: blue;
 }
-.Facebook h5{
+.Facebook #titpre {
+	width: 100%
+}
+.Facebook #titPre H5 {
 	background-color: #4267b2;
 	border-bottom: 1px solid #29487d;
 	color: #fff;
-	min-width: 100%;
-	color: white;
+	width: 100%;
+	padding-top: 10px;
 }
+
 .Twitter {
 
 }
