@@ -12,7 +12,7 @@ class NetworksSeeder extends Seeder
     public function run()
     {
       DB::table('networks')->insert([
-        ['description' => 'Facebook'],
+        ['description' => 'Facebook' ],
         ['description' => 'Instagram'],
         ['description' => 'Twitter'],
       ]);

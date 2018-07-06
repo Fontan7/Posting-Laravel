@@ -24,7 +24,7 @@ class Postcontroller extends Controller
         return view ('posteos', compact('posts'));
     }
 
-    public function uploadImage(Request $request)
+    public function uploadImage()
     {
       $file = Request()->file('img_post');
       $random = str_random(10);
@@ -63,6 +63,7 @@ class Postcontroller extends Controller
      */
     public function store(Request $request)
     {
+      
       $request['user_id'] = \Auth::user()->id;
       $networks = Network::all();
       $nets;

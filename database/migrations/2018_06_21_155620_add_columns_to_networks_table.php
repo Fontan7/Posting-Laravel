@@ -14,9 +14,9 @@ class AddColumnsToNetworksTable extends Migration
     public function up()
     {
         Schema::table('networks', function (Blueprint $table) {
-          $table->string('image');
-          $table->string('characters');
-          $table->string('view');
+          $table->string('image')->nullable();
+          $table->string('characters')->nullable();
+          $table->string('view')->nullable();
         });
     }
 
