@@ -9,8 +9,10 @@
     <div class="container">
         <h1>Estamos actualizando el sitio</h1>
         <p>Por favor intenta de nuevo más tarde</p>
-
-        <footer>Copyright ® {{ date('Y') }}</footer>
+        <a href="{{ route('home') }}">Regresar al home</a>
+      	<div class="errorimg">
+      		<img src="{{ asset('/images/error.jpg') }}" alt="error">
+      </div>
     </div>
     <script src="/js/app.js"></script>
 </body>
