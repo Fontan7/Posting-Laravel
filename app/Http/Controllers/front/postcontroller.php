@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Network;
 use App\Post;
-use Intervention\Image;
+use ImageInt;
 
 
 
@@ -24,19 +24,20 @@ class Postcontroller extends Controller
         return view ('posteos', compact('posts'));
     }
 
-    public function uploadImage()
+    public function uploadImage(Request $request)
     {
-      $file = Request::file('image');
-      /*$random = str_random(10);
+      $file = Request()->file('img_post');
+      $random = str_random(10);
       $nombre = $random.'-'.$file->getClientOriginalName();
       $path = public_path('uploads/'.$nombre);
       $url = '/uploads/'.$nombre;
-      $image = Image::make($file->getRealPath());
-      $image->save($path);*/
+      $image = ImageInt::make($file->getRealPath());
+      $image->save($path);
 
-      $image = Image::make($file->getRealPath());
+
+/*      $image = Image::make($file->getRealPath());
       $image->encode('data-url');
-      return '<img src="'.$image.'"/>';
+      return '<img src="'.$image.'"/>'; */
     }
 
     /**

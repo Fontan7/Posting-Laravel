@@ -27,6 +27,7 @@ function netClick(i){
 
   // aca se podria variar el concatenado en funcion a si se muestra primero la imagen
   // o si se muestra primero el texto
+
   var textH = divGral.concat(divPre).concat(divEncPre).concat(imgUser).concat(divTit).concat('<h5>').concat(usenv).concat('- ').concat(i.name).concat('</h5>').concat(divH).concat('Hace una hora').concat(closeDiv).concat(closeDiv).concat(pPre).concat(closeDiv).concat(footPre).concat(closeDiv);
 
 // en esta parte solamente agrega lo seteado antes cando esta marcado
