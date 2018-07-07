@@ -27,16 +27,19 @@ class Postcontroller extends Controller
 
     public function uploadImage()
     {
-      $file = Request()->file('img_post');
-      $random = str_random(10);
-      $nombre = $random.'-'.$file->getClientOriginalName();
-      $path = public_path('uploads/'.$nombre);
-      $url = '/uploads/'.$nombre;
-      $image = ImageInt::make($file->getRealPath());
-      $image->save($path);
+      $path = false;
+
+      if (request()->hasFile('img_post')) {
+        $file = Request()->file('img_post');
+        $random = str_random(10);
+        $nombre = $random.'-'.$file->getClientOriginalName();
+        $path = public_path('uploads/'.$nombre);
+        $url = '/uploads/'.$nombre;
+        $image = ImageInt::make($file->getRealPath());
+        $image->save($path);
+      }
       return $path;
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -63,20 +66,24 @@ class Postcontroller extends Controller
       $request['user_id'] = \Auth::user()->id;
       $networks = Network::all();
       $nets;
-
+// revisa entre todas las networks cuales fueron seleccionadas
       foreach ($networks as $key => $network) {
         if (isset($request[$network['description']])) {
            $nets[] = $network['id'];
         }
       }
+// graba los posts
       $post = Post::create(request()->all());
       $post->networks()->sync($nets);
+
       $path = $this->uploadImage();
-      $image = new Image(['src' => $path, 'post_id' => $post->id]);
-      $image->save();
+      if ($path) {
+        $image = new Image(['src' => $path, 'post_id' => $post->id]);
+        $image->save();
+      };
+// va a la pagina de posteos
       $posts = Post::all();
       return view ('posteos', compact('posts'));
-
     }
 
     /**

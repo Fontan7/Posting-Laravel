@@ -9,6 +9,7 @@ main{
 	width:100%;
 	flex: 1 ;  /* RELLENAR EL CONTENIDO CON FLEX:1 */
 }
+
 .links  a {
 		color: #636b6f;
 		padding: 0 25px;
@@ -118,4 +119,4 @@ footer {
 }
 .line {
 	display: inline-block;
-}
+};

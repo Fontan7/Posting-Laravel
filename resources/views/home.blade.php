@@ -16,8 +16,8 @@
               </div>
               <div class="card-footer bg-light">
                 <div>
-                  <label for="img_post">Ingresar una Imagen</label>
-                  <input class="hidden" name="img_post" id='img_post' type="file" accept="image/*">
+                  <label for="img_post" >Ingresar una Imagen</label>
+                  <input class="hidden" name="img_post" id='img_post' type="file" accept="image/*" onchange="readURL(this);" />
                 </div>
                 <div>
                   <label>Seleccione redes a previsualizar:  </label>
@@ -27,6 +27,7 @@
                 </div>
                 <button class="btn btn-primary" id="create-status">Postear</button>
               </div>
+
             </form>
         </div>
       </div>
@@ -38,7 +39,7 @@
 
     <div class="col-8 mx-auto">
       <div id="red">
-
+          <img id="foto" src="#" alt="your image" style="display:none">
       </div>
     </div>
   </div>
