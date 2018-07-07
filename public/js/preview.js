@@ -1,4 +1,7 @@
 var text;
+var imgsrc;
+var reader;
+
 
 $(document).ready(function() {
 $("#text-post").keyup(function() {
@@ -23,17 +26,19 @@ function netClick(i){
   var divH = '<class="small text-muted" div id="timePre" >';
   var closeDiv = '</div>'
   var pPre = '<p class="card-text preview"></p>'
-  var footPre = '<div class="card card-footer border-1 p-1 d-flex mb-3"><i class="far fa-thumbs-up text-secondary p-2 d-flex justify-content-between align-items-center"></i></div>'
+  var footPre = '<div class="card card-footer border-1 p-1 d-flex mb-3"><i class="far fa-thumbs-up text-secondary p-2 d-flex justify-content-between align-items-center"></i></div>';
+  var img_post = '<img id="img_post src="">';
 
   // aca se podria variar el concatenado en funcion a si se muestra primero la imagen
   // o si se muestra primero el texto
 
-  var textH = divGral.concat(divPre).concat(divEncPre).concat(imgUser).concat(divTit).concat('<h5>').concat(usenv).concat('- ').concat(i.name).concat('</h5>').concat(divH).concat('Hace una hora').concat(closeDiv).concat(closeDiv).concat(pPre).concat(closeDiv).concat(footPre).concat(closeDiv);
+  var textH = divGral.concat(divPre).concat(divEncPre).concat(imgUser).concat(divTit).concat('<h5>').concat(usenv).concat('- ').concat(i.name).concat('</h5>').concat(divH).concat('Hace una hora').concat(closeDiv).concat(closeDiv).concat(img_post).concat(pPre).concat(closeDiv).concat(footPre).concat(closeDiv);
 
 // en esta parte solamente agrega lo seteado antes cando esta marcado
   if (i.checked) {
     document.getElementById('red').style.display='block';
       $('#red').append(textH);
+
 // lo mueve despues sino no lo hace hasta la proxima vuelta
     $(".preview").html(text);
   } if (!i.checked) {
@@ -41,4 +46,20 @@ function netClick(i){
     $(idName).remove();
     //document.getElementById('red').style.display='none'
   }
+
 };
+
+function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#red#img_post')
+                        .attr('src', e.target.result);
+                        console.log('pase');
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+            console.log(input);
+        }

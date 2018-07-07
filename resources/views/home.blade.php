@@ -17,7 +17,7 @@
               <div class="card-footer bg-light">
                 <div>
                   <label for="img_post">Ingresar una Imagen</label>
-                  <input class="hidden" name="img_post" id='img_post' type="file" accept="image/*">
+                  <input onchange="readURL(this)" src="#" class="hidden"  name="img_post" id='img_post' type="file" accept="image/*">
                 </div>
                 <div>
                   <label>Seleccione redes a previsualizar:  </label>
@@ -38,7 +38,7 @@
 
     <div class="col-8 mx-auto">
       <div id="red">
-
+        <img id="img_post" src="" alt="" >
       </div>
     </div>
   </div>
