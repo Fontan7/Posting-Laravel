@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Network;
 use App\Post;
-use App\Image;
 use ImageInt;
 
 
@@ -27,21 +26,19 @@ class Postcontroller extends Controller
 
     public function uploadImage()
     {
-<<<<<<< HEAD
+
       $file = Request()->file('img_post');
       /*$random = str_random(10);
       $nombre = $random.'-'.$file->getClientOriginalName();
       $path = public_path('uploads/'.$nombre);
       $url = '/uploads/'.$nombre;
       $image = ImageInt::make($file->getRealPath());
-<<<<<<< HEAD
       $image->save($path);*/
 
 
       /*$image = ImageInt::make($file->getRealPath());
       $image->encode('data-url');
       return '<img src="'.$image.'"/>';*/
-=======
       $path = false;
 
       if (request()->hasFile('img_post')) {
@@ -54,7 +51,7 @@ class Postcontroller extends Controller
         $image->save($path);
       }
       return $path;
->>>>>>> a0950d57f389ff1ef9573fe8ed84d8a7f801b7de
+
     }
     /**
      * Show the form for creating a new resource.
@@ -79,10 +76,6 @@ class Postcontroller extends Controller
      */
     public function store(Request $request)
     {
-<<<<<<< HEAD
-
-=======
->>>>>>> 630e8535045e1cc1be47b3bee4fc96267e9b582f
       $request['user_id'] = \Auth::user()->id;
       $networks = Network::all();
       $nets;

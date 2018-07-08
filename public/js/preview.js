@@ -37,12 +37,12 @@ function netClick(i){
   // aca se podria variar el concatenado en funcion a si se muestra primero la imagen
   // o si se muestra primero el texto
 
-<<<<<<< HEAD
+
   var textH = divGral.concat(divPre).concat(divEncPre).concat(imgUser).concat(divTit).concat('<h5>').concat(usenv).concat('- ').concat(i.name).concat('</h5>').concat(divH).concat('Hace una hora').concat(closeDiv).concat(closeDiv).concat(img_post).concat(pPre).concat(closeDiv).concat(footPre).concat(closeDiv);
 
-=======
+
   var textH = divGral.concat(divPre).concat(divEncPre).concat(imgUser).concat(divTit).concat('<h5>').concat(usenv).concat('- ').concat(i.name).concat('</h5>').concat(divH).concat('Hace una hora').concat(closeDiv).concat(closeDiv).concat(pPre).concat(closeDiv).concat('<img id="foto2" src="').concat(srcFoto).concat('"') .concat('alt="your image">').concat(footPre).concat(closeDiv);
->>>>>>> a0950d57f389ff1ef9573fe8ed84d8a7f801b7de
+
 // en esta parte solamente agrega lo seteado antes cando esta marcado
   if (i.checked) {
     document.getElementById('red').style.display='block';
@@ -57,7 +57,7 @@ function netClick(i){
   }
 
 };
-<<<<<<< HEAD
+
 
 function readURL(input) {
             if (input.files && input.files[0]) {
@@ -73,7 +73,7 @@ function readURL(input) {
             }
             console.log(input);
         }
-=======
+
 // prueba
 function readURL(input) {
         if (input.files && input.files[0]) {
@@ -90,4 +90,3 @@ function readURL(input) {
         }
 
     };
->>>>>>> a0950d57f389ff1ef9573fe8ed84d8a7f801b7de
