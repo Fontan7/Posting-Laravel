@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Network;
 use App\Post;
+use App\Image;
 use ImageInt;
 
 
@@ -32,6 +33,7 @@ class Postcontroller extends Controller
       $path = public_path('uploads/'.$nombre);
       $url = '/uploads/'.$nombre;
       $image = ImageInt::make($file->getRealPath());
+<<<<<<< HEAD
       $image->save($path);*/
 
 
@@ -63,18 +65,27 @@ class Postcontroller extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 630e8535045e1cc1be47b3bee4fc96267e9b582f
       $request['user_id'] = \Auth::user()->id;
       $networks = Network::all();
       $nets;
 
       foreach ($networks as $key => $network) {
-        if (!isset($request[$network['description']])) {
+        if (isset($request[$network['description']])) {
            $nets[] = $network['id'];
         }
       }
       $post = Post::create(request()->all());
       $post->networks()->sync($nets);
+      $path = $this->uploadImage();
+      $image = new Image(['src' => $path, 'post_id' => $post->id]);
+      $image->save();
+      $posts = Post::all();
+      return view ('posteos', compact('posts'));
+
     }
 
     /**

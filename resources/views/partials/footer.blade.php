@@ -1,5 +1,4 @@
-<footer>
-  <nav class="footer-nav">
+<footer class="footer-nav">
     <ul>
       <li>© Copyright 2018<li>
       </ul>
@@ -30,5 +29,4 @@
           </a>
         </li>
       </ul>
-    </nav>
 </footer>
