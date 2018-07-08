@@ -9,7 +9,6 @@ use App\Post;
 use ImageInt;
 
 
-
 class Postcontroller extends Controller
 {
 
@@ -20,7 +19,7 @@ class Postcontroller extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::paginate(2);
         return view ('posteos', compact('posts'));
     }
 
