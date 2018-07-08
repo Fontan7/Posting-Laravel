@@ -42,7 +42,7 @@
     <div class="col-8 mx-auto">
       <div id="red">
         <img id="img_post" src="" alt="" >
-          <img id="foto" src="#" alt="your image" style="display:none">
+        <img id="foto" src="#" alt="your image" style="display:none">
       </div>
     </div>
   </div>

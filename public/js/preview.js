@@ -41,7 +41,7 @@ function netClick(i){
   var textH = divGral.concat(divPre).concat(divEncPre).concat(imgUser).concat(divTit).concat('<h5>').concat(usenv).concat('- ').concat(i.name).concat('</h5>').concat(divH).concat('Hace una hora').concat(closeDiv).concat(closeDiv).concat(img_post).concat(pPre).concat(closeDiv).concat(footPre).concat(closeDiv);
 
 
-  var textH = divGral.concat(divPre).concat(divEncPre).concat(imgUser).concat(divTit).concat('<h5>').concat(usenv).concat('- ').concat(i.name).concat('</h5>').concat(divH).concat('Hace una hora').concat(closeDiv).concat(closeDiv).concat(pPre).concat(closeDiv).concat('<img id="foto2" src="').concat(srcFoto).concat('"') .concat('alt="your image">').concat(footPre).concat(closeDiv);
+  var textH = divGral.concat(divPre).concat(divEncPre).concat(imgUser).concat(divTit).concat('<h5>').concat(usenv).concat('- ').concat(i.name).concat('</h5>').concat(divH).concat('Hace una hora').concat(closeDiv).concat(closeDiv).concat(pPre).concat(closeDiv).concat('<img id="foto2" class="col-12 mx-auto" src="').concat(srcFoto).concat('"') .concat('alt="your image">').concat(footPre).concat(closeDiv);
 
 // en esta parte solamente agrega lo seteado antes cando esta marcado
   if (i.checked) {
