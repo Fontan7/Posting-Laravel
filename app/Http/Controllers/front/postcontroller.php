@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Network;
 use App\Post;
 use ImageInt;
+use App\Image;
 
 
 class Postcontroller extends Controller
@@ -94,8 +95,8 @@ class Postcontroller extends Controller
         $image->save();
       };
 // va a la pagina de posteos
-      $posts = Post::all();
-      return view ('posteos', compact('posts'));
+        $posts = Post::paginate(2);
+        return view ('posteos', compact('posts'));
     }
 
     /**
