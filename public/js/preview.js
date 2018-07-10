@@ -1,7 +1,7 @@
 var text;
 var imgsrc;
 var reader;
-
+var srcFoto;
 
 $(document).ready(function() {
 $("#text-post").keyup(function() {
@@ -13,7 +13,7 @@ $("#text-post").keyup(function() {
   //lo muevo de nuevo para que se actualice si cambias solo el texto
 });
 })
-var srcFoto;
+
 function netClick(i){
   var usenv = i.getAttribute('usenv');
 
@@ -29,11 +29,7 @@ function netClick(i){
   var footPre = '<div class="card card-footer border-1 p-1 d-flex mb-3"><i class="far fa-thumbs-up text-secondary p-2 d-flex justify-content-between align-items-center"></i></div>';
   var img_post = '<img class="foto2" src="';
 
-  // tomo la imagen oculta y la pongo visible
-
-   srcFoto = $('.foto2').attr('src');
-
-  // aca se podria variar el concatenado en funcion a si se muestra primero la imagen
+// aca se podria variar el concatenado en funcion a si se muestra primero la imagen
   // o si se muestra primero el texto
 
 
@@ -58,21 +54,19 @@ function netClick(i){
 function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
-
             reader.onload = function (e) {
               $('.foto2')
                 .attr('src', e.target.result);
-                imagen = e.target.result;
+                srcFoto = e.target.result;
+                $('.foto2').attr('src', srcFoto);
             };
 
             reader.readAsDataURL(input.files[0]);
-        }
-
+        };
     };
 
     function cambiarFoto(input){
-
-    $('.foto2').attr('src', srcFoto);
-
-
+     if (srcFoto) {
+      $('.foto2').attr('src', srcFoto);
+    }
     };
