@@ -81,7 +81,7 @@ class RelationController extends Controller
        return redirect('/front/relations');
     }
 
-    /**
+      /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
