@@ -41,9 +41,9 @@
                                 <button type="submit" name="borrar" class="btn btn-secondary">
                                   <i>Dejar de Seguir</i>
                                  </button>
-                                 <a href="/front/relations/{{$user->id}}/show" class="btn btn-primary"> Enviar Mensajes
-                                     </a>
                                 </form>
+                                <a href="/front/chats/{{$user->id}}/index" class="btn btn-primary"> Enviar Mensajes
+                                </a>
                               @endif
                               </div>
                           </td>
