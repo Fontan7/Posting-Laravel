@@ -14,7 +14,8 @@ class ChatController extends Controller
      */
     public function index($id)
     {
-        dd($id);
+        //dd($id);
+        return view('front/chats/index');
     }
 
     /**
