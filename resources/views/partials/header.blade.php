@@ -29,7 +29,7 @@
         <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Mi Perfil</a>
           <a class="dropdown-item" href="/posteos">Ver posts</a>
-          <a class="dropdown-item" href="/front/relations">Administrar Contactos</a>
+          <a class="dropdown-item" href="/front/relations">Contactos</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="{{ url('/logout') }}"
             onclick="event.preventDefault();
