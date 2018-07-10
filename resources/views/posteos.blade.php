@@ -24,7 +24,7 @@
 
         </div>
         <div class="card card-footer border-1 p-1 d-flex mb-3">
-          <i class="far fa-thumbs-up text-secondary p-2 d-flex justify-content-between align-items-center"></i>
+          <i class="p-2 d-flex justify-content-between align-items-center"></i>
         </div>
 
       @endforeach

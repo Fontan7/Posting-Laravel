@@ -21,7 +21,7 @@ class Postcontroller extends Controller
     public function index()
     {
         $id = \Auth::user()->id;
-        $posts = Post::paginate(2);
+        $posts = Post::where('user_id', $id)->orderByRaw('created_at DESC')->with('networks', 'images')->paginate(3);
         return view ('posteos', compact('posts'));
     }
 

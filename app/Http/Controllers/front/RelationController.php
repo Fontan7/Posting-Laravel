@@ -20,6 +20,7 @@ class RelationController extends Controller
       $users = user::where('id','<>', $id)->paginate(2);
       $rels = [];
       $myUser = User::with(['relations'])->where('id', $id)->get();
+
       foreach ($myUser as $user){
         foreach ($user->relations as $rel) {
           $rels[$rel->user_id_2] = '1';
@@ -100,11 +101,13 @@ class RelationController extends Controller
     public function destroy($id)
     {
       $idUser = \Auth::user()->id;
-      $relation = new Relation([
-        'user_id_1' => $idUser,
-         'user_id_2' => $id,
-      ]);
-      $myUser =  \Auth::user()->relations()->delete($relation);
+      //$relation = User::find()->where('id',$idUser);
+
+      $relation = Relation::where('user_id_1',$idUser)
+                          ->where('user_id_2',$id)
+                          ->get();
+
+      $relation->first()->delete();
       return redirect('/front/relations');
     }
 }
