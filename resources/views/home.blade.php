@@ -17,9 +17,7 @@
               <div class="card-footer bg-light">
                 <div>
                   <label for="img_post">Ingresar una Imagen</label>
-                  <input onchange="readURL(this)" src="#" class="hidden"  name="img_post"
-                  <label for="img_post" >Ingresar una Imagen</label>
-                  <input class="hidden" name="img_post" id='img_post' type="file" accept="image/*" onchange="readURL(this);" />
+                  <input class="hidden" onchange="readURL(this); cambiarFoto(this)" src="#" name="img_post" id='img_post' type="file" accept="image/*"></input>
                 </div>
                 <div>
                   <label>Seleccione redes a previsualizar:  </label>
@@ -40,8 +38,7 @@
     <h4 class="mx-auto">Previsualizacion de posteos</h4>
     <div class="col-8 mx-auto">
       <div id="red">
-        <img id="img_post" src="" alt="" >
-        <img id="foto" src="#" alt="your image" style="display:none">
+        <img id="foto3" src="#" alt="your image" style="display:none">
       </div>
     </div>
   </div>
