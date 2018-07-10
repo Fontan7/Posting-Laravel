@@ -5,6 +5,7 @@ namespace App\Http\Controllers\front;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Relation;
+use App\User;
 
 class RelationController extends Controller
 {
@@ -15,7 +16,17 @@ class RelationController extends Controller
      */
     public function index()
     {
-        //
+      $id = \Auth::user()->id;
+      $users = user::paginate(3);
+      $rels = [];
+      $myUser = user::with(['relations'])->where('id', $id)->get();
+      foreach ($myUser as $user){
+        foreach ($user->relations as $rel) {
+          $rels[$rel->user_id_2] = '1';
+        };
+      };
+      return view ('front.relations.index', compact('users'))->with('rels', $rels);
+
     }
 
     /**
@@ -25,7 +36,7 @@ class RelationController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -58,7 +69,16 @@ class RelationController extends Controller
      */
     public function edit($id)
     {
-        //
+      $idUser = \Auth::user()->id;
+      $relation = new Relation([
+        'user_id_1' => $idUser,
+         'user_id_2' => $id,
+         'state_id' => 1,
+      ]);
+      $myUser = user::where('id',$idUser)->first();
+      $myUser->relations()->save($relation);
+
+       return redirect('/front/relations');
     }
 
     /**
@@ -81,6 +101,15 @@ class RelationController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $idUser = \Auth::user()->id;
+      $relation = new Relation([
+        'user_id_1' => $idUser,
+         'user_id_2' => $id,
+         'state_id' => 1,
+      ]);
+      $myUser = user::where('id',$idUser)->first();
+      $myUser->relations()->delete($relation);
+      return redirect('/front/relations');
+
     }
 }

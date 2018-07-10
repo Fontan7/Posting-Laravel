@@ -1,9 +1,10 @@
 <?php
 
 namespace App;
-
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+
 
 class User extends Authenticatable
 {
@@ -31,4 +32,9 @@ class User extends Authenticatable
   {
     return $this->belongsToMany(Roll::class);
   }
+
+  public function relations()
+{
+  return $this->hasMany(Relation::class,'user_id_1','id');
+}
 }

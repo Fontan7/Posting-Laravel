@@ -38,7 +38,6 @@
 <br>
   <div class="col-8 mx-auto card border-0">
     <h4 class="mx-auto">Previsualizacion de posteos</h4>
-
     <div class="col-8 mx-auto">
       <div id="red">
         <img id="img_post" src="" alt="" >

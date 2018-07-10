@@ -20,6 +20,7 @@ class Postcontroller extends Controller
      */
     public function index()
     {
+        $id = \Auth::user()->id;
         $posts = Post::paginate(2);
         return view ('posteos', compact('posts'));
     }
@@ -28,17 +29,6 @@ class Postcontroller extends Controller
     {
 
       $file = Request()->file('img_post');
-      /*$random = str_random(10);
-      $nombre = $random.'-'.$file->getClientOriginalName();
-      $path = public_path('uploads/'.$nombre);
-      $url = '/uploads/'.$nombre;
-      $image = ImageInt::make($file->getRealPath());
-      $image->save($path);*/
-
-
-      /*$image = ImageInt::make($file->getRealPath());
-      $image->encode('data-url');
-      return '<img src="'.$image.'"/>';*/
       $path = false;
 
       if (request()->hasFile('img_post')) {
@@ -95,8 +85,7 @@ class Postcontroller extends Controller
         $image->save();
       };
 // va a la pagina de posteos
-        $posts = Post::paginate(2);
-        return view ('posteos', compact('posts'));
+       return redirect('/posteos');
     }
 
     /**
