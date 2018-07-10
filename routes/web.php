@@ -49,6 +49,4 @@ Route::post('post/store', 'front\postcontroller@store');
 Route::resource('front/relations', 'front\RelationController');
 
 Route::get('front/chats/{relation}/index', 'front\ChatController@index');
-
-// genero un route para relaciones, poder seleccionar
-Route::resource('front/chats', 'front\ChatController');
+Route::post('front/chats/{relation}/store', 'front\ChatController@store');

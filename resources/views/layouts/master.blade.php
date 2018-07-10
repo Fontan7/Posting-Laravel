@@ -14,7 +14,7 @@
 
 
   <title> @yield('title') - {{config('app.name')}} </title>
-  <link rel="stylesheet" href="../../css/custom.css">
+  <link rel="stylesheet" href="\css/custom.css">
 </head>
 
 <body>

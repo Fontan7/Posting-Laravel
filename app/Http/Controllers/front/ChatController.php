@@ -4,6 +4,7 @@ namespace App\Http\Controllers\front;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Chat;
 
 class ChatController extends Controller
 {
@@ -14,8 +15,9 @@ class ChatController extends Controller
      */
     public function index($id)
     {
-        //dd($id);
-        return view('front/chats/index');
+        //$chat = Chat::paginate(3);
+        $chats = Chat::all();
+        return view('front/chats/index', compact('chats'));
     }
 
     /**
@@ -34,9 +36,15 @@ class ChatController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($id)
     {
-        //
+      $idUser = \Auth::user()->id;
+      $mensaje = Chat::create([
+        'user_ori' => $idUser,
+        'user_dst' => $id,
+        'text_chat' => request()->input('text_chat'),
+      ]);
+      return redirect('/front/chats/'.$id.'/index');
     }
 
     /**
