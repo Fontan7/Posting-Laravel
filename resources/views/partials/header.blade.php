@@ -1,16 +1,14 @@
 <header>
-  <nav class="navbar navbar-expand-md navbar-light">
+  <nav class="navbar navbar-expand navbar-light">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar navbar-clasic lineHeader">
       <a class="navbar-brand" href="{{ route('home') }}">Posting</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     @guest
-      <div class="lineHeader col-md-4 col-md-offset-4 links"> <!-- /.navbar-collapse -->
+      <div class="lineHeader navbar-brand"> <!-- /.navbar-collapse -->
 
           <a role="presentation"  href="{{   route('login') }}">{{ __('Login') }}
           </a>
@@ -20,7 +18,7 @@
     </div>
 
     @else
-      <div class="collapse navbar-collapse col-md-4 col-md-offset-4" id="bs-example-navbar-collapse-1"> <!-- /.navbar-collapse -->
+      <div class="navbar-brand" id="bs-example-navbar-collapse-1"> <!-- /.navbar-collapse -->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
         <a class="float-rihgt nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
