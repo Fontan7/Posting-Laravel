@@ -2,7 +2,7 @@ body{
 	display:flex;
 	flex-direction:column;
 	min-height: 100vh; /* USAR EL 100% DEL VIEWPORT EN ALTURA*/
-	background-image: url("../images/write.jpg");
+	/*background-image: url("../images/write.jpg");*/
 
 }
 main{
@@ -13,7 +13,10 @@ main{
 	display: none;
 }
 .tablest {
-	color: white;
+	color: black;
+}
+th{
+	text-align: center;
 }
 .links  a {
 		color: #636b6f;
