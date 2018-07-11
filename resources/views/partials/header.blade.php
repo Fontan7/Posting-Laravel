@@ -1,9 +1,9 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
+  <nav class="navbar navbar-expand-md navbar-light">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar navbar-clasic lineHeader row">
-      <a class="navbar-brand col-md-4" href="{{ route('home') }}">Posting</a>
+    <div class="navbar navbar-clasic lineHeader">
+      <a class="navbar-brand" href="{{ route('home') }}">Posting</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

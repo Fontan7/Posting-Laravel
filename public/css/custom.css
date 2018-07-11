@@ -9,6 +9,9 @@ main{
 	width:100%;
 	flex: 1 ;  /* RELLENAR EL CONTENIDO CON FLEX:1 */
 }
+.hidden {
+	display: none;
+}
 .tablest {
 	color: white;
 }
@@ -34,7 +37,16 @@ main{
 	width: 100%;
 }
 .lineHeader {
-	width: 90%;
+	width: 100%;
+}
+.nets{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-bottom: 15px;
+}
+.nets div {
+	margin-right: 20px;
 }
 .Facebook p {
 	font-family: inherit;
