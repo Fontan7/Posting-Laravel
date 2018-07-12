@@ -21,12 +21,18 @@
             </div>
           </div>
           <p class="card-text text-secondary" >{{ $post->text_post }}</p>
-
+          @foreach ($post->images as $image)
+            <img class="foto2" src="/uploads/{{$image->src}}" alt="your image">
+          @endforeach
         </div>
         <div class="card card-footer border-1 p-1 d-flex mb-3">
-          <i class="p-2 d-flex justify-content-between align-items-center"></i>
-        </div>
+          <div class="">Redes previsualizadas:
+            @foreach ($post->networks as $network)
+              <a href=""> {{$network->description}} </a>
+            @endforeach
 
+          </div>
+        </div>
       @endforeach
       {{ $posts->links() }}
 

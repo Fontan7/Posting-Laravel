@@ -9,7 +9,6 @@ use App\Post;
 use ImageInt;
 use App\Image;
 
-
 class Postcontroller extends Controller
 {
 
@@ -27,9 +26,8 @@ class Postcontroller extends Controller
 
     public function uploadImage()
     {
-
       $file = Request()->file('img_post');
-      $path = false;
+      $nombre = false;
 
       if (request()->hasFile('img_post')) {
         $file = Request()->file('img_post');
@@ -40,7 +38,7 @@ class Postcontroller extends Controller
         $image = ImageInt::make($file->getRealPath());
         $image->save($path);
       }
-      return $path;
+      return $nombre;
 
     }
     /**
@@ -68,7 +66,7 @@ class Postcontroller extends Controller
     {
       $request['user_id'] = \Auth::user()->id;
       $networks = Network::all();
-      $nets;
+      $nets = false;
 // revisa entre todas las networks cuales fueron seleccionadas
       foreach ($networks as $key => $network) {
         if (isset($request[$network['description']])) {
@@ -77,11 +75,12 @@ class Postcontroller extends Controller
       }
 // graba los posts
       $post = Post::create(request()->all());
-      $post->networks()->sync($nets);
-
-      $path = $this->uploadImage();
-      if ($path) {
-        $image = new Image(['src' => $path, 'post_id' => $post->id]);
+      if ($nets) {
+        $post->networks()->sync($nets);
+      }
+      $nombre = $this->uploadImage();
+      if ($nombre) {
+        $image = new Image(['src' => $nombre, 'post_id' => $post->id]);
         $image->save();
       };
 // va a la pagina de posteos
