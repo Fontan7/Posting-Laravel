@@ -8,11 +8,9 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     @guest
-      <div class="lineHeader navbar-brand"> <!-- /.navbar-collapse -->
+      <div class="top-right links navbar-brand"> <!-- /.navbar-collapse -->
 
-          <a role="presentation"  href="{{   route('login') }}">{{ __('Login') }}
-          </a>
-
+          <a role="presentation"  href="{{   route('login') }}">{{ __('Login') }}</a>
           <a role="presentation" href="{{ route('register') }}">{{ __('Register') }}</a>
 
     </div>
