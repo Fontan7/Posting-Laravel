@@ -10,10 +10,6 @@ Route::get('/welcome', function () {  //hace lo mismo que la ruta anterior, solo
 });
 Route::get('/posteos', 'front\postcontroller@index');
 
-Route::get('/ubercommand', function () {  //ubercommand (super comando) es donde el usuario escribe los post y decide a que redes enviarlo
-    return view('ubercommand');
-});
-
 Route::get('/profile', function () {  //profile es donde el usuario puede ver su propio perfil, y cambiar su foto o nickname
     return view('profile');
 });
