@@ -22,7 +22,7 @@ function netClick(i){
   //con nombre que llega
   var divPre = '<div id="divPre" class="card-body d-flex flex-column card border-1 shadow-sm">';
   var divEncPre = '<div id="encPre" class="d-flex align-items-center">';
-  var imgUser = '<img class="rounded-circle mr-3" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg">';
+  var imgUser = '<img class="imgU rounded-circle mr-3" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg">';
   var divTit = '<div id="titPre">';
   var linTit = '<div id="linPre">';
   var divH = '<div class="small text-muted ml-5" div id="timePre" >';
