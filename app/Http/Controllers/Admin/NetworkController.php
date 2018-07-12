@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Network;
 use App\Post;
+use ImageInt;
 
 
 class NetworkController extends Controller
@@ -17,16 +18,8 @@ class NetworkController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
         $networks = Network::all();
-        return view('admin.networks.index', compact('networks'), compact('posts'));
-
-    }
-
-    public function posts_controller()
-    {
-        $posts = Post::all();
-        return view('admin.posts.index', compact('posts'));
+        return view('admin.networks.index', compact('networks'));
 
     }
 
@@ -37,7 +30,7 @@ class NetworkController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.networks.addNet');
     }
 
     /**
@@ -48,7 +41,15 @@ class NetworkController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $nombre = $this->uploadImage();
+      $network = new Network(
+        [ 'description' => $request->description,
+          'image' => $nombre,
+          'characters' => $request->characters,
+          'view' => $request->view,
+        ]);
+      $network->save();
+      return redirect('/admin/networks');
     }
 
     /**
@@ -93,6 +94,27 @@ class NetworkController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $Network = Network::find($id);
+      $Network->delete();
+      return redirect('/admin/networks');
     }
+
+    public function uploadImage()
+    {
+      $file = Request()->file('image');
+      $nombre = false;
+
+      if (request()->hasFile('image')) {
+        $file = Request()->file('image');
+        $random = str_random(10);
+        $nombre = $random.'-'.$file->getClientOriginalName();
+        $path = public_path('logos/'.$nombre);
+        $url = '/logos/'.$nombre;
+        $image = ImageInt::make($file->getRealPath());
+        $image->save($path);
+      }
+      return $nombre;
+
+    }
+
 }

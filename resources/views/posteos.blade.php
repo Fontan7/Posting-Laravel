@@ -34,13 +34,14 @@
             <p>{{$network->description}}</p>
         </div>
         @endforeach
-      </div>
-      <form method="post"     action="post/{{$post->id}}/destroy">
+
+        <form method="post"  action="post/{{$post->id}}/destroy">
         @csrf
-        <button type="submit" name="borrar" class="btn btn-secondary">
-          <i>Borrar Post</i>
-        </button>
-      </form>
+          <button type="submit" name="borrar" class="btn btn-secondary mt-0 float-right">
+            <i>Borrar Post</i>
+          </button>
+          </form>
+      </div>
     </div>
     @endforeach
 
