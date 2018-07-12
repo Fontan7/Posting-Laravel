@@ -3,7 +3,8 @@ body{
 	flex-direction:column;
 	min-height: 100vh; /* USAR EL 100% DEL VIEWPORT EN ALTURA*/
 	/*background-image: url("../images/write.jpg");*/
-
+	font-family: sans-serif;
+	font-size: 14px;
 }
 main{
 	width:100%;
@@ -15,8 +16,13 @@ main{
 .tablest {
 	color: black;
 }
+
 th{
 	text-align: center;
+}
+
+.img_post {
+	width: 100%;
 }
 .links  a {
 		color: #636b6f;
@@ -36,6 +42,7 @@ th{
 .ulnav {
 	display: inline;
 	}
+
 .links {
 	width: 100%;
 }
@@ -102,6 +109,11 @@ th{
 .foto2 {
 	width: 100%;
 	padding: 0;
+}
+.titPre {
+	margin-right: 10px;
+	font-weight: bold;
+
 }
 /*-------------------------*/
 /* FOOTER
