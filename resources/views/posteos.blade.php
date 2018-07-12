@@ -35,6 +35,12 @@
         </div>
         @endforeach
       </div>
+      <form method="post"     action="post/{{$post->id}}/destroy">
+        @csrf
+        <button type="submit" name="borrar" class="btn btn-secondary">
+          <i>Borrar Post</i>
+        </button>
+      </form>
     </div>
     @endforeach
 

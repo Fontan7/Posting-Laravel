@@ -129,6 +129,10 @@ class Postcontroller extends Controller
      */
     public function destroy($id)
     {
-        //
+    $post = Post::find($id);
+    $post->networks()->detach();
+    $post->images()->delete();
+    $post->delete();
+    return redirect('/posteos');
     }
 }

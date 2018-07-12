@@ -44,6 +44,7 @@ Route::resource('admin/users', 'admin\UserController');
 
 
 Route::post('post/store', 'front\postcontroller@store');
+Route::post('post/{id}/destroy', 'front\postcontroller@destroy');
 
 // genero un route para relaciones, poder seleccionar
 Route::resource('front/relations', 'front\RelationController');

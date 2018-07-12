@@ -8,6 +8,8 @@ use App\Image;
 
 class Post extends Model
 {
+    use SoftDeletes;
+    
     protected $fillable = ['text_post', 'user_id'];
 
     public function images()
