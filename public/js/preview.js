@@ -18,22 +18,24 @@ function netClick(i){
   var usenv = i.getAttribute('usenv');
   var logo = i.getAttribute('nlogo');
 // definicion de tags a agregar en html
-  var divGral = '<div id="'.concat(i.name).concat('" class="card border-1 shadow-sm"">'); //con nombre que llega
+  var divGral = '<div id="'.concat(i.name).concat('" class=" ">');
+  //con nombre que llega
   var divPre = '<div id="divPre" class="card-body d-flex flex-column card border-1 shadow-sm">';
   var divEncPre = '<div id="encPre" class="d-flex align-items-center">';
   var imgUser = '<img class="rounded-circle mr-3" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg">';
   var divTit = '<div id="titPre">';
-  var divH = '<class="small text-muted" div id="timePre" >';
-  var closeDiv = '</div>'
-  var pPre = '<p class="card-text preview"></p>'
+  var linTit = '<div id="linPre">';
+  var divH = '<div class="small text-muted" div id="timePre" >';
+  var closeDiv = '</div>';
+  var pPre = '<p class="card-text preview"></p>';
   var footPre = '<div class="card card-footer border-1 p-1 d-flex mb-3"><i class="far fa-thumbs-up text-secondary p-2 d-flex justify-content-between align-items-center"></i></div>';
   var img_post = '<img class="foto2" src="';
-  var logoimg = '<img class="" src="admin/logos/'.concat(logo).concat('" width="80">');
+  var logoimg = '<img class="" src="admin/logos/'.concat(logo).concat('">');
 // aca se podria variar el concatenado en funcion a si se muestra primero la imagen
   // o si se muestra primero el texto
 
 
-  var textH = divGral.concat(divPre).concat(divEncPre).concat(imgUser).concat(divTit).concat(logoimg).concat('<h5>').concat(usenv).concat('- ').concat(i.name).concat('</h5>').concat(divH).concat('Hace una hora').concat(closeDiv).concat(closeDiv).concat(pPre).concat(closeDiv).concat(img_post).concat(srcFoto).concat('"') .concat('alt="your image">').concat(footPre).concat(closeDiv);
+  var textH = divGral.concat(divPre).concat(divEncPre).concat(divTit).concat(logoimg).concat('<h5>').concat(usenv).concat('-').concat(i.name).concat('</h5>').concat(closeDiv).concat(imgUser).concat(usenv).concat(divH).concat('Hace una hora').concat(closeDiv).concat(closeDiv).concat(pPre).concat(img_post).concat(srcFoto).concat('"') .concat('alt="your image">').concat(closeDiv).concat(footPre).concat(closeDiv).concat(closeDiv);
 
 // en esta parte solamente agrega lo seteado antes cando esta marcado
   if (i.checked) {

@@ -43,6 +43,7 @@
     <div class="col-md-10 mx-auto">
       <div id="red">
         <img id="foto3" src="#" alt="your image" style="display:none">
+        
       </div>
     </div>
   </div>
