@@ -24,7 +24,7 @@
                   <div class="nets">
                   @foreach ($networks as $network)
                   <div >
-                    <input onclick="netClick(this)" type="checkbox" name="{{$network->description}}" value="{{$network->id}}" usenv="{{ Auth::user()->name }}" rlogo="{{$network->imagen}}" ></input>
+                    <input onclick="netClick(this)" type="checkbox" name="{{$network->description}}" value="{{$network->id}}" nlogo="{{$network->image}}" usenv="{{ Auth::user()->name }}" ></input>
                     <label for="">{{$network->description}}</label>
                   </div>
                   @endforeach
