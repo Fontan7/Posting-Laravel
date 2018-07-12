@@ -33,7 +33,7 @@ Route::get('/Contact', function () {
 
 // genero un route para que un administrador pueda dar de alta redes
 // a las cuales puede enviar Posting
-Route::resource('admin/networks', 'admin\networkController');
+Route::resource('admin/networks', 'admin\NetworkController');
 
 // genero un route para que un administrador pueda dar de alta roles de usuarios
 Route::resource('admin/rolls', 'admin\RollController');

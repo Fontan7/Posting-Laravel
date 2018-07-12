@@ -60,6 +60,7 @@ class NetworkController extends Controller
      */
     public function show($id)
     {
+      dd('hola show');
         //
     }
 
@@ -69,9 +70,9 @@ class NetworkController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Network $Network)
     {
-        //
+       return view('admin.networks.edit', compact('Network'));
     }
 
     /**
@@ -81,9 +82,17 @@ class NetworkController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Network $Network)
     {
-        //
+       $nombre = $this->uploadImage();
+       $Network->update(
+         [ 'description' => request()->description,
+           'image' => $nombre,
+           'characters' => request()->characters,
+           'view' => request()->view,
+         ]);
+       return redirect('/admin/networks');
+
     }
 
     /**
@@ -108,8 +117,8 @@ class NetworkController extends Controller
         $file = Request()->file('image');
         $random = str_random(10);
         $nombre = $random.'-'.$file->getClientOriginalName();
-        $path = public_path('logos/'.$nombre);
-        $url = '/logos/'.$nombre;
+        $path = public_path('admin/logos/'.$nombre);
+        $url = '/admin/logos/'.$nombre;
         $image = ImageInt::make($file->getRealPath());
         $image->save($path);
       }

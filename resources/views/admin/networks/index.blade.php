@@ -21,7 +21,9 @@
                       <tr>
                           <td scope="col">{{ $network->description }}</td>
                           <td scope="col">
-                            <img src="logos/{{ $network->image }}" alt="">
+                            @if ($network->image)
+                              <img width="80" src="/admin/logos/{{ $network->image }}" alt="">                            
+                            @endif
                           </td>
                           <td scope="col">{{ $network->characters }}</td>
                           <td scope="col">{{ $network->view }}</td>
