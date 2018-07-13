@@ -13,11 +13,11 @@
      <br>
      <h1> ¿Do you want to contact us for any reason? </h1>
  <br>
-     <h2>Telefone: 11-5484585484</h2>
+     <h2>Telefone: +54 9 11 12345678</h2>
  <br>
-     <h3>Mail: zuckerberg_for_president@gmail.com</h3>
+     <h3>Mail: info@posting.alumnosdh.com</h3>
  <br>
-     <h3>Twitter: posting_will_take_over@twitter </h3>
+     <h3>Twitter: @posting </h3>
      <br>
      <br>
      <br>
@@ -29,7 +29,7 @@
      <br>
      <br>
      <br>
-     <h3> Direction: Av.Hell 666 (please just, don't come).</h3>
+     <h3> Direction: Monroe 860, C.A.B.A. - Argentina</h3>
 
    </article>
    </div>

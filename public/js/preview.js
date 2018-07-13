@@ -32,15 +32,14 @@ function netClick(i){
   var footPre2 = '<div class="card card-footer bg-white border-0 p-1 d-flex mb-3"><i class="far fa-heart text-secondary p-2 d-flex justify-content-between align-items-center"></i></div>';
   var img_post = '<img class="foto2" src="';
   var logoimg = '<img class="" src="admin/logos/'.concat(logo).concat('">');
-  var divN = '<div>';
+  var divN = '<div class="mt-2">';
 
 // aca se podria variar el concatenado en funcion a si se muestra primero la imagen
   // o si se muestra primero el texto
-  console.log(i.name);
   if (i.name == "Instagram") {
     var textH =divGral.concat(divPre).concat(divEncPre).concat(divTit).concat(logoimg).concat('<h5>').concat(i.name).concat('</h5>').concat(closeDiv).concat(closeDiv).concat(divN).concat(imgUser).concat(usenv).concat('</p>').concat(closeDiv).concat(pPre).concat(img_post).concat(srcFoto).concat('"') .concat('alt="yourimage">').concat(closeDiv).concat(footPre2).concat(closeDiv).concat(closeDiv);
   } else {
-    var textH =divGral.concat(divPre).concat(divEncPre).concat(divTit).concat(logoimg).concat('<h5>').concat(usenv).concat('-').concat(i.name).concat('</h5>').concat(closeDiv).concat(closeDiv).concat(divN).concat(imgUser).concat(usenv).concat('</p>').concat(divH).concat('Hace una hora').concat(closeDiv).concat(closeDiv).concat(pPre).concat(img_post).concat(srcFoto).concat('"') .concat('alt="yourimage">').concat(closeDiv).concat(footPre).concat(closeDiv).concat(closeDiv);
+    var textH =divGral.concat(divPre).concat(divEncPre).concat(divTit).concat(logoimg).concat('<h5>').concat(usenv).concat(' - ').concat(i.name).concat('</h5>').concat(closeDiv).concat(closeDiv).concat(divN).concat(imgUser).concat(usenv).concat('</p>').concat(divH).concat('Hace una hora').concat(closeDiv).concat(closeDiv).concat(pPre).concat(img_post).concat(srcFoto).concat('"') .concat('alt="yourimage">').concat(closeDiv).concat(footPre).concat(closeDiv).concat(closeDiv);
   }
 
 
@@ -48,13 +47,12 @@ function netClick(i){
   if (i.checked) {
     document.getElementById('red').style.display='block';
       $('#red').append(textH);
-
+      //$('.foto2').css('display', 'none');
 // lo mueve despues sino no lo hace hasta la proxima vuelta
     $(".preview").html(text);
   } if (!i.checked) {
     var idName = '#'.concat(i.name);
     $(idName).remove();
-    //document.getElementById('red').style.display='none'
   }
      srcFoto = $('.foto2').attr('src');
 };
